@@ -70,9 +70,104 @@ namespace lista_lotnisk
             var f2 = new Form2();
             f2.Show();
             ((Form2)f2).listBox1.Items.Clear();
-            foreach(string s in checkedListBox1.CheckedItems)
+            
+
+            DialogResult d;
+
+            /*foreach (Class1 el in list)
             {
-                ((Form2)f2).listBox1.Items.Add(s);
+                switch (checkedListBox1.SelectedItem)
+                {
+                    case 0:
+                    d = MessageBox.Show("im here");
+                    ((Form2)f2).listBox1.Items.Add(el.ICAO);
+                    break;
+                    case 1:
+                    ((Form2)f2).listBox1.Items.Add(el.IATA);
+                    break;
+                    case 2:
+                    ((Form2)f2).listBox1.Items.Add(el.Liczba_pasazerow);
+                    break;
+                    case 3:
+                    ((Form2)f2).listBox1.Items.Add(el.Wojewodztwo);
+                    break;
+                    case 4:
+                    ((Form2)f2).listBox1.Items.Add(el.Miasto);
+                    break;
+                }
+            }*/
+            /*d = MessageBox.Show("im here");
+            int col_index = dataGridView1.CurrentCell.ColumnIndex;
+            foreach (Class1 ble in list)
+            {
+                if (checkedListBox1.SelectedIndex == 0)
+                {
+                    ((Form2)f2).listBox1.Items.Add(ble.ICAO);
+                    break;
+                }
+                else if (checkedListBox1.SelectedIndex == 1)
+                {
+                    ((Form2)f2).listBox1.Items.Add(ble.IATA);
+                    break;
+                }
+                else if (checkedListBox1.SelectedIndex == 2)
+                {
+                    ((Form2)f2).listBox1.Items.Add(ble.Liczba_pasazerow);
+                    break;
+                }
+                else if (checkedListBox1.SelectedIndex == 3)
+                {
+                    ((Form2)f2).listBox1.Items.Add(ble.Wojewodztwo);
+                    break;
+                }
+                else if (checkedListBox1.SelectedIndex == 4)
+                {
+                    ((Form2)f2).listBox1.Items.Add(ble.Miasto);
+                    break;
+                }
+            }*/
+
+            
+            int row_index = dataGridView1.CurrentCell.RowIndex;
+            int col_index = dataGridView1.CurrentCell.ColumnIndex;
+            string sel_name = dataGridView1.Rows[row_index].Cells[col_index].Value.ToString();
+
+            Class1 sel_airport = null;
+            foreach(Class1 airport in list)
+            {
+                if(airport.Nazwa == sel_name)
+                {
+                    sel_airport = airport;
+                    break;
+                }
+            }
+
+            foreach(string sel_item in checkedListBox1.CheckedItems)
+            {
+                if (sel_item == "Kod lotniska ICAO")
+                {
+                    ((Form2)f2).listBox1.Items.Add(sel_airport.ICAO);
+                }
+                else if (sel_item == "Kod lotniska IATA")
+                {
+                    ((Form2)f2).listBox1.Items.Add(sel_airport.IATA);
+                    
+                }
+                else if (sel_item == "Liczba pasażerów")
+                {
+                    ((Form2)f2).listBox1.Items.Add(sel_airport.Liczba_pasazerow);
+                    
+                }
+                else if (sel_item == "Województwo")
+                {
+                    ((Form2)f2).listBox1.Items.Add(sel_airport.Wojewodztwo);
+                    
+                }
+                else if (sel_item == "Miasto")
+                {
+                    ((Form2)f2).listBox1.Items.Add(sel_airport.Miasto);
+                    
+                }
             }
 
         }

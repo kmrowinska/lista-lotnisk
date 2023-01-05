@@ -57,7 +57,7 @@
             "Liczba pasażerów",
             "Województwo",
             "Miasto"});
-            this.checkedListBox1.Location = new System.Drawing.Point(575, 162);
+            this.checkedListBox1.Location = new System.Drawing.Point(520, 163);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(209, 136);
             this.checkedListBox1.TabIndex = 2;
@@ -77,7 +77,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(166, 548);
+            this.button2.Location = new System.Drawing.Point(137, 533);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 33);
             this.button2.TabIndex = 4;
@@ -87,13 +87,12 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(495, 439);
+            this.dataGridView1.Size = new System.Drawing.Size(303, 439);
             this.dataGridView1.TabIndex = 5;
             // 
             // Form1
